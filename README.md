@@ -22,19 +22,11 @@ sum // 118.11
 ```
 const numbers = [29.76, 41.85, 46.5];
 
-const average = numbers.reduce((total, amount, index, array) => {
-  total += amount;
-  if( index === array.length-1) { 
-    return total/array.length;
-  }else { 
-    return total;
-  }
-});
+const average = (array) => array.reduce((a, b) => a + b) / array.length;
 
-average // 39.37
+const avg = average(numbers)
+avg // 39.37
 
-// solution 2
-let average = (array) => array.reduce((a, b) => a + b) / array.length;
 ```
 &nbsp;
 ##### Find min and max in array
