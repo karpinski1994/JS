@@ -51,6 +51,18 @@ const [min, max] = nums.reduce(
 // max: 8
 ```
 &nbsp;
+&nbsp;
+##### Sum even and odd numbers in one go
+&nbsp;
+```
+const numbers = [1, 2, 3, 4, 5];
+
+const evenOddSum = array => array.reduce((acc, cur, id) => (acc[id & 1] += cur,acc), [0,0])
+
+const sum = evenOddSum(numbers);
+sum // [9, 6]
+```
+&nbsp;
 ##### Transform array of objects into object storing children objects by id
 &nbsp;
 ```
