@@ -236,6 +236,13 @@ const flattedTotally = numbers.flat(Infinity);
 
 
 ```
+## Filter
+#### Filter out falsy values 
+```
+[1, 2, 3, 0].filter(Boolean)
+// result [1, 2, 3]
+```
+
 
 ## Functional programming
 ##### Fire function once
