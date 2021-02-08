@@ -170,3 +170,25 @@ const onceAndAfter = (once, after) => {
   };
 };
 ```
+
+
+### Memoization
+&nbsp;
+#### Fibonacci
+
+```
+let cache = [];
+
+const fibo = (n) => {
+  if (cache[n] === undefined) {
+    if (n === 0) {
+      cache[0] = 0;
+    } else if (n === 1) {
+      cache[1] = 1;
+    } else {
+      cache[n] = fibo(n - 2) + fibo(n - 1);
+    }
+  }
+  return cache[n];
+};
+```
