@@ -203,6 +203,21 @@ const numbers = ['4.2332', '12.221', '2131.4367'].map(parseFloat);
 const ALPHABET = range('A'.charCodeAt(), 'Z'.charCodeAt()).map(code => String.fromCharCode(code));
 
 ```
+### Flat
+&nbsp;
+##### Process nested arrays
+```
+
+const numbers = [1, 2, [[3, (4)[(5, 6)]][(7, 8)]]];
+
+const oneLevelDeep = numbers.flat(1);
+
+const twoLevelsDeep = numbers.flat(2);
+
+const flattedTotally = numbers.flat(Infinity);
+
+
+```
 
 ## Functional programming
 ##### Fire function once
@@ -241,7 +256,11 @@ const onceAndAfter = (once, after) => {
 };
 ```
 
-
+#### Factorial by range
+&nbsp;
+```
+const factorialByRange = n => range(1, n).reduce((x, y) => x * y, 1); 
+```
 ### Memoization
 &nbsp;
 #### Fibonacci
