@@ -122,3 +122,40 @@ fruitsOnly:  [
   'coconut',   'pineapple'
 ]
 ```
+
+## Functional programming
+### Fire function once
+```
+const once = (once) => {
+  let done = false;
+  return (...args) => {
+    if (!done) {
+      done = true;
+      once(...args);
+    }
+  };
+};
+```
+### Another way
+```
+const once = (fn) => {
+  return (...args) => {
+    fn && fn(...args);
+    fn = null;
+  };
+};
+```
+### Fire function once and after (for ex. warning)
+```
+const onceAndAfter = (once, after) => {
+  let done = false;
+  return (...args) => {
+    if (!done) {
+      done = true;
+      once(...args);
+    } else {
+      after(...args);
+    }
+  };
+};
+```
