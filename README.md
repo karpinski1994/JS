@@ -15,6 +15,12 @@ const numbers = [29.76, 41.85, 46.5];
 const sum = numbers.reduce((total, amount) => total + amount);
 
 sum // 118.11
+
+// Other way
+
+const sum = (acc, value) => acc + value;
+const mySum = numbers.reduce(sum, 0);
+
 ```
 &nbsp;
 ##### Count the average of array
@@ -27,8 +33,40 @@ const average = (array) => array.reduce((a, b) => a + b) / array.length;
 const avg = average(numbers)
 avg // 39.37
 
+
+// 2nd way
+const avg = array.reduce(sum, 0) / array.length;
+
+// 3rd way
+const avg2 = (sum, val, id, arr) => {
+  sum += val;
+  return id === arr.length - 1 ? sum / arr.length : sum;
+};
+
 ```
+##### Calculating several values at once
 &nbsp;
+```
+// Object
+const average = arr => {
+const sumCount = arr.reduce(
+  (acc, val) => ({sum: val + acc, count acc.count + 1}),
+  {sum: 0, count: 0});
+
+  return sumCount.sum / sumCount.count;
+}
+
+// Array
+const average = arr => {
+const sumCount = arr.reduce(
+  (acc, val) => ({sum: acc[0] + val, count acc[1] + 1}),
+  [0, 0]);
+
+  return sumCount[0] / sumCount[1]
+}
+```
+
+
 ##### Find min and max in array
 &nbsp;
 ```
@@ -122,6 +160,13 @@ fruitsOnly:  [
   'coconut',   'pineapple'
 ]
 ```
+&nbsp;
+### reduceRight
+&nbsp;
+##### Reverse string
+```
+const reverseString = str => str.split('').reduceRight((x, y) => x + y, '');
+```
 ### Map
 &nbsp;
 ##### Ranges
@@ -133,6 +178,8 @@ const range = (from, to, including = true) => {
     .map((_, id) => (including ? from + id : from + id + 1));
 };
 ```
+##### Extracting data from objects
+
 
 ## Functional programming
 ##### Fire function once
@@ -191,4 +238,9 @@ const fibo = (n) => {
   }
   return cache[n];
 };
+```
+
+#### Fibonacci better way
+```
+const fibo = (n, a = 0, b = 1) => (n === 0 ? a : fibo(n - 1, b, a +b));
 ```
