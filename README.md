@@ -178,8 +178,31 @@ const range = (from, to, including = true) => {
     .map((_, id) => (including ? from + id : from + id + 1));
 };
 ```
+&nbsp;
 ##### Extracting data from objects
+```
+const cities = [
+  {name: 'New York', long:40.7128, lat: 74.0060},
+  {name: 'Tokyo', long:25.2048, lat: 55.2708},
+  {name: 'Krakow', long:50.0647, lat: 19.9450},
+]
 
+const avgLong = average(cities.map(city => city.long))
+const avgLat = average(cities.map(city => city.lat))
+```
+&nbsp;
+##### Parse float
+```
+const numbers = ['4.2332', '12.221', '2131.4367'].map(parseFloat);
+
+// Doesnt work with parseInt! which takes more args
+```
+&nbsp;
+##### Create alphabet
+```
+const ALPHABET = range('A'.charCodeAt(), 'Z'.charCodeAt()).map(code => String.fromCharCode(code));
+
+```
 
 ## Functional programming
 ##### Fire function once
