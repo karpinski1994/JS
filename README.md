@@ -65,7 +65,25 @@ const sumCount = arr.reduce(
   return sumCount[0] / sumCount[1]
 }
 ```
+##### Calculate itams in an array
+&nbsp;
+```
+const brands = ['suzuki', 'suzuki', 'mercedes', 'audi', 'mercedes'];
 
+const brandsCount = arr.reduce(
+    (acc, val) => ({ ...acc, [val]: acc[val] ? acc[val] + 1 : 1}),
+    {}
+  );
+
+```
+#### Result
+```
+{
+  audi: 1
+  mercedes: 2
+  suzuki: 2
+}
+```
 
 ##### Find min and max in array
 &nbsp;
