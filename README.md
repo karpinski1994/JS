@@ -122,9 +122,20 @@ fruitsOnly:  [
   'coconut',   'pineapple'
 ]
 ```
+### Map
+&nbsp;
+##### Ranges
+```
+const range = (from, to, including = true) => {
+  const scope = including ? to - from + 1 : to - from - 1;
+  return Array(scope)
+    .fill(0)
+    .map((_, id) => (including ? from + id : from + id + 1));
+};
+```
 
 ## Functional programming
-### Fire function once
+##### Fire function once
 ```
 const once = (once) => {
   let done = false;
@@ -136,7 +147,7 @@ const once = (once) => {
   };
 };
 ```
-### Another way
+##### Another way
 ```
 const once = (fn) => {
   return (...args) => {
@@ -145,7 +156,7 @@ const once = (fn) => {
   };
 };
 ```
-### Fire function once and after (for ex. warning)
+##### Fire function once and after (for ex. warning)
 ```
 const onceAndAfter = (once, after) => {
   let done = false;
