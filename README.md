@@ -236,6 +236,93 @@ const flattedTotally = numbers.flat(Infinity);
 
 
 ```
+&nbsp;
+##### Extract participants from nested api structure
+```
+const apiAnswer = [
+  {
+    id: 122232,
+    name: 'John Doe',
+    groups: [
+      {
+        groupId: 121221,
+        groupName: 'Doplphins',
+        participants: [{ participantId: 3846864, name: 'Max' }],
+      },
+    ],
+  },
+  {
+    id: 122233,
+    name: 'Marry Cohen',
+    groups: [
+      {
+        groupId: 232131,
+        groupName: 'Alaska Team',
+        participants: [{ participantId: 2644487, name: 'Merry' }],
+      },
+    ],
+  },
+  {
+    id: 122234,
+    name: 'Christine Malone',
+    groups: [
+      {
+        groupId: 12121221,
+        groupName: 'Tigers',
+        participants: [
+          {
+            participantId: 50720006,
+            name: 'Harry',
+          },
+          {
+            participantId: 4899911,
+            name: 'Barry',
+          },
+          {
+            participantId: 4899966,
+            name: 'Lissie',
+          },
+        ],
+      },
+    ],
+  },
+];
+
+
+```
+#### Solution
+```
+  apiAnswer.map(x => x.groups)
+  .flat()
+  .map(y => y.participants)
+  .flat()
+```
+#### Result
+```
+[
+  {
+    name: 'Max',
+    participantId: 3846864,
+  },
+  {
+    name: 'Merry',
+    participantId: 2644487,
+  },
+  {
+    name: 'Harry',
+    participantId: 50720006,
+  },
+  {
+    name: 'Barry',
+    participantId: 4899911,
+  },
+  {
+    name: 'Lissie',
+    participantId: 4899966,
+  },
+]
+```
+
 ## Filter
 #### Filter out falsy values 
 ```
