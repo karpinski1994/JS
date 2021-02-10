@@ -322,6 +322,14 @@ const apiAnswer = [
   },
 ]
 ```
+### FlatMapp
+&nbsp;
+##### Same example as above
+```
+apiAnswer
+  .flatMap(x => x.groups)
+  .flatMap(y => y.participants)
+```
 
 ## Filter
 #### Filter out falsy values 
