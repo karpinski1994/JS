@@ -338,7 +338,14 @@ apiAnswer
 // result [1, 2, 3]
 ```
 
+&nbsp;
+## Every
+#### Make none using every (function returning true  only when non of elements pass the predicate)
+```
+const none = (arr, fn) => arr.every(v => !fn(v));
+```
 
+&nbsp;
 ## Functional programming
 ##### Fire function once
 ```
