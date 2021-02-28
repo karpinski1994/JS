@@ -409,7 +409,24 @@ const fibo = (n) => {
 };
 ```
 
-#### Fibonacci better way
+
+
+### Working with objects
+&nbsp;
+#### Getting a property from an object
+
 ```
-const fibo = (n, a = 0, b = 1) => (n === 0 ? a : fibo(n - 1, b, a +b));
+const cities = [
+  { name: 'New York', long: 40.7128, lat: 74.006 },
+  { name: 'Tokyo', long: 25.2048, lat: 55.2708 },
+  { name: 'Krakow', long: 50.0647, lat: 19.945 },
+];
+
+const avgLong = average(cities.map((city) => city.long));
+const avgLat = average(cities.map((city) => city.lat));
+```
+
+#### Get field value
+```
+const getField = attr => obj => obj[attr];
 ```
