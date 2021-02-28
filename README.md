@@ -441,4 +441,9 @@ const getAge = getField('age)';
 getName(example) // "Tom"
 getAge(example) // 26
 
+// From previous example
+cont avgLat = average(cities.map(getField('lat')));
+cont avgLon = average(cities.map(getField('lon')));
+
+// Also see lodash: .get, .property, .propertyOf
 ```
