@@ -428,5 +428,17 @@ const avgLat = average(cities.map((city) => city.lat));
 
 #### Get field value
 ```
+const example = {
+  name: 'Tom',
+  age: 26,
+}
+
 const getField = attr => obj => obj[attr];
+
+const getName = getField('name)';
+const getAge = getField('age)';
+
+getName(example) // "Tom"
+getAge(example) // 26
+
 ```
