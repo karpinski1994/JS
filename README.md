@@ -4,25 +4,12 @@ Some helpful tips, tricks, good practices and ready-made solutions in Javascript
 # List of javascript useful practical tricks and patterns
 
 ---
-<ol>
-  <li>
-    [Arrays](#arrays)
-      <ol>
-        <li>
-          [Reduce](#reduce)
-           <ol>
-            <li>
-              [Sum values of an array](#sum_values_of_array)
-             </li>
+[Arrays](#arrays)
+[Reduce](#reduce)
+[Sum values of an array](#sum_values_of_array)
 
-          </ol>
-         </li>
         
-      </ol>
-
-  </li>
   
-</ol>
 
 
 ---
