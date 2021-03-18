@@ -3,12 +3,37 @@ Some helpful tips, tricks, good practices and ready-made solutions in Javascript
 
 # List of javascript useful practical tricks and patterns
 
-[create an anchor](#find_min_max_in_array)
 ---
+<ol>
+  <li>
+    [Arrays](#arrays)
+      <ol>
+        <li>
+          [Reduce](#reduce)
+           <ol>
+            <li>
+              [Sum values of an array](#sum_values_of_array)
+             </li>
+
+          </ol>
+         </li>
+        
+      </ol>
+
+  </li>
+  
+</ol>
+
+
+---
+
 &nbsp;
+<a name="arrays"></a>
 ## Arrays
+<a name="reduce"></a>
 ### Reduce
 &nbsp;
+<a name="sum_values_of_array"></a>
 ##### Sum values of an array
 &nbsp;
 
