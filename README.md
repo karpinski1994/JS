@@ -15,8 +15,9 @@ Some helpful tips, tricks, good practices and ready-made solutions in Javascript
           1. [Calculate items](#calculate_items_in_an_array_2)
           1. [Parse array of objects into an object](#parse_array_of_obj_into_an_obj)
           1. [Filter out data from a nested structure](#filter_out_data_from_nested_structure)
-      2. [ReduceRight](#reduce_right)
-         1.[Reverse a string](#reverse_string_reduce_rightt) 
+    2. [ReduceRight](#reduce_right)]
+          1. [Reverse a string](#reverse_string_reduce_rightt) 
+         
 
 ---
 
