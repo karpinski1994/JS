@@ -477,3 +477,18 @@ cont avgLat = average(cities.map(getField('lat')));
 
 // Also see lodash: .get, .property, .propertyOf
 ```
+
+
+#### Logically negating a function
+```
+const not = fn => (...args) => !fn(...args);
+```
+
+#### Reversed filter
+```
+const filterNot = arr => fn => arr.filter(not(fn));
+```
+#### Inverting results
+```
+const invert = fn => (...args) => -fn(...args);
+```
