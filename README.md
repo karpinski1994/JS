@@ -2,6 +2,8 @@
 Some helpful tips, tricks, good practices and ready-made solutions in Javascript / Typescript
 
 # List of javascript useful practical tricks and patterns
+
+[Calculate itams in an array](##### Calculate itams in an array)
 ---
 &nbsp;
 ## Arrays
