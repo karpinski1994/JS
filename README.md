@@ -6,13 +6,17 @@ Some helpful tips, tricks, good practices and ready-made solutions in Javascript
 ---
 1. [Arrays](#arrays)
     1. [Reduce](#reduce)
-          1. [Sum values of an array](#sum_values_of_array)
-          1. [Count the average of an array](#count_average_of_array_1)
+          1. [Sum values](#sum_values_of_array)
+          1. [Count the average](#count_average_of_array_1)
           1. [Calculate several values at once](#calculate_several_values_at_once)
-          1. [Calculate items in an array](#calculate_items_in_an_array_2)
-        
-  
-
+          1. [Calculate items](#calculate_items_in_an_array_2)
+          1. [Find min and max](#find_min_and_max_in_array)
+          1. [Find min and max](#sum_even_and_odd_numbers_in_one_go)
+          1. [Calculate items](#calculate_items_in_an_array_2)
+          1. [Parse array of objects into an object](#parse_array_of_obj_into_an_obj)
+          1. [Filter out data from a nested structure](#filter_out_data_from_nested_structure)
+      2. [ReduceRight](#reduce_right)
+         1.[Reverse a string](#reverse_string_reduce_rightt) 
 
 ---
 
@@ -120,6 +124,7 @@ const [min, max] = nums.reduce(
 ```
 &nbsp;
 &nbsp;
+<a name="sum_even_and_odd_numbers_in_one_go"></a>
 ##### Sum even and odd numbers in one go
 &nbsp;
 ```
@@ -131,6 +136,7 @@ const sum = evenOddSum(numbers);
 sum // [9, 6]
 ```
 &nbsp;
+<a name="parse_array_of_obj_into_an_obj"></a>
 ##### Transform array of objects into object storing children objects by id
 &nbsp;
 ```
@@ -170,6 +176,7 @@ objectsByIdArr {
 &nbsp;
 ##### 
 &nbsp;
+<a name="filter_out_data_from_nested_structure"></a>
 ##### Filter out data from nested structure
 &nbsp;
 
@@ -199,8 +206,10 @@ fruitsOnly:  [
 ]
 ```
 &nbsp;
+<a name="reduce_right"></a>
 ### reduceRight
 &nbsp;
+<a name="reverse_string_reduce_rightt"></a>
 ##### Reverse string
 ```
 const reverseString = str => str.split('').reduceRight((x, y) => x + y, '');
