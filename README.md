@@ -7,7 +7,9 @@ Some helpful tips, tricks, good practices and ready-made solutions in Javascript
 1. [Arrays](#arrays)
     1. [Reduce](#reduce)
           1. [Sum values of an array](#sum_values_of_array)
-
+          1. [Count the average of an array](#count_average_of_array_1)
+          1. [Calculate several values at once](#calculate_several_values_at_once)
+          1. [Calculate items in an array](#calculate_items_in_an_array_2)
         
   
 
@@ -38,6 +40,7 @@ const mySum = numbers.reduce(sum, 0);
 
 ```
 &nbsp;
+<a name="count_average_of_array_1"></a>
 ##### Count the average of array
 &nbsp;
 ```
@@ -59,6 +62,7 @@ const avg2 = (sum, val, id, arr) => {
 };
 
 ```
+<a name="calculate_several_values_at_once"></a>
 ##### Calculating several values at once
 &nbsp;
 ```
@@ -80,6 +84,7 @@ const sumCount = arr.reduce(
   return sumCount[0] / sumCount[1]
 }
 ```
+<a name="calculate_items_in_an_array_2"></a>
 ##### Calculate itams in an array
 &nbsp;
 ```
