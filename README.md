@@ -3,7 +3,7 @@ Some helpful tips, tricks, good practices and ready-made solutions in Javascript
 
 # List of javascript useful practical tricks and patterns
 
-
+[create an anchor](#find_min_max_in_array)
 ---
 &nbsp;
 ## Arrays
@@ -11,7 +11,7 @@ Some helpful tips, tricks, good practices and ready-made solutions in Javascript
 &nbsp;
 ##### Sum values of an array
 &nbsp;
-[Calculate itams in an array](##### Calculate itams in an array)
+
 ```
 const numbers = [29.76, 41.85, 46.5];
 
@@ -87,7 +87,7 @@ const brandsCount = arr.reduce(
   suzuki: 2
 }
 ```
-
+<a name="find_min_max_in_array"></a>
 ##### Find min and max in array
 &nbsp;
 ```
