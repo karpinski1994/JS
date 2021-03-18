@@ -6,7 +6,7 @@ Some helpful tips, tricks, good practices and ready-made solutions in Javascript
 ---
 1. [Arrays](#arrays)
     1. [Reduce](#reduce)
-           1. [Sum values of an array](#sum_values_of_array)
+          1. [Sum values of an array](#sum_values_of_array)
 
         
   
