@@ -15,8 +15,19 @@ Some helpful tips, tricks, good practices and ready-made solutions in Javascript
           1. [Calculate items](#calculate_items_in_an_array_2)
           1. [Parse array of objects into an object](#parse_array_of_obj_into_an_obj)
           1. [Filter out data from a nested structure](#filter_out_data_from_nested_structure)
-    2. [ReduceRight](#reduce_right)
-          1. [Reverse a string](#reverse_string_reduce_rightt) 
+    1. [ReduceRight](#reduce_right)
+          1. [Reverse a string](#reverse_string_reduce_rightt)
+    1. [Map](#array_map)
+          1. [Creating ranges](#creating_ranges)
+          1. [Extracting data from objects](#extracting_data_from_obj)
+          1. [Parsing to float](#parse_float)
+          1. [Create an alphabet](#create_an_alphabet)
+    1. [Flat](#array_flat)
+          1. [Process nested arrays](#process_nested_arrays)
+          1. [Extract data from nested API](#extract_data_from_nested_api)
+    1. [FlatMap](#array_flat_map)
+    1. [Filter](#array_filter)
+          1. [Filter out falsy values](#filter_out_falsy_values)
          
 
 ---
@@ -215,8 +226,10 @@ fruitsOnly:  [
 ```
 const reverseString = str => str.split('').reduceRight((x, y) => x + y, '');
 ```
+<a name="array_map"></a>
 ### Map
 &nbsp;
+<a name="creating_ranges"></a>
 ##### Ranges
 ```
 const range = (from, to, including = true) => {
@@ -227,6 +240,7 @@ const range = (from, to, including = true) => {
 };
 ```
 &nbsp;
+<a name="extracting_data_from_obj"></a>
 ##### Extracting data from objects
 ```
 const cities = [
@@ -239,6 +253,7 @@ const avgLong = average(cities.map(city => city.long))
 const avgLat = average(cities.map(city => city.lat))
 ```
 &nbsp;
+<a name="parse_float"></a>
 ##### Parse float
 ```
 const numbers = ['4.2332', '12.221', '2131.4367'].map(parseFloat);
@@ -246,13 +261,16 @@ const numbers = ['4.2332', '12.221', '2131.4367'].map(parseFloat);
 // Doesnt work with parseInt! which takes more args
 ```
 &nbsp;
+<a name="create_an_alphabet"></a>
 ##### Create alphabet
 ```
 const ALPHABET = range('A'.charCodeAt(), 'Z'.charCodeAt()).map(code => String.fromCharCode(code));
 
 ```
+<a name="array_flat"></a>
 ### Flat
 &nbsp;
+<a name="process_nested_arrays"></a>
 ##### Process nested arrays
 ```
 
@@ -267,6 +285,7 @@ const flattedTotally = numbers.flat(Infinity);
 
 ```
 &nbsp;
+<a name="extract_data_from_nested_api"></a>
 ##### Extract participants from nested api structure
 ```
 const apiAnswer = [
@@ -352,7 +371,8 @@ const apiAnswer = [
   },
 ]
 ```
-### FlatMapp
+<a name="array_flat_map"></a>
+### FlatMap
 &nbsp;
 ##### Same example as above
 ```
@@ -360,8 +380,9 @@ apiAnswer
   .flatMap(x => x.groups)
   .flatMap(y => y.participants)
 ```
-
+<a name="array_filter"></a>
 ## Filter
+<a name="filter_out_falsy_values"></a>
 #### Filter out falsy values 
 ```
 [1, 2, 3, 0].filter(Boolean)
