@@ -28,6 +28,8 @@ Some helpful tips, tricks, good practices and ready-made solutions in Javascript
     1. [FlatMap](#array_flat_map)
     1. [Filter](#array_filter)
           1. [Filter out falsy values](#filter_out_falsy_values)
+  2. [Functional programming](#functional_programming)
+    1. [Currying](#currying)
          
 
 ---
@@ -512,4 +514,14 @@ const filterNot = arr => fn => arr.filter(not(fn));
 #### Inverting results
 ```
 const invert = fn => (...args) => -fn(...args);
+```
+
+<a name="functional_programming"></a>
+## Functional programming
+<a name="currying"></a>
+##### Currying
+&nbsp;
+```
+const exampleFn = (a, b, c) => `${100 * a + 10 * b + c}`;
+const exampleCurried = a => b => c => `${100 * a + 10 * b + c}`;
 ```
