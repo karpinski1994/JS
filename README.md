@@ -28,8 +28,10 @@ Some helpful tips, tricks, good practices and ready-made solutions in Javascript
     1. [FlatMap](#array_flat_map)
     1. [Filter](#array_filter)
           1. [Filter out falsy values](#filter_out_falsy_values)
-  2. [Functional programming](#functional_programming)
+2. [Functional programming](#functional_programming)
     1. [Currying](#currying)
+          1. [Adding vat](#add_vat)
+
          
 
 ---
@@ -524,4 +526,16 @@ const invert = fn => (...args) => -fn(...args);
 ```
 const exampleFn = (a, b, c) => `${100 * a + 10 * b + c}`;
 const exampleCurried = a => b => c => `${100 * a + 10 * b + c}`;
+```
+<a name="add_vat"></a>
+##### Adding vat curried way
+&nbsp;
+```
+const addVAT = (rate, amount) => amount * (1 + rate / 100); 
+// addVAT(20,500) => 600
+
+// Curried example
+const addVATcurried = rate => amount => amount * (1 + rate / 100);
+const addFoodVAT = addVATcurried(18);
+// addFoodVAT(100) => 118
 ```
