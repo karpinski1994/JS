@@ -31,6 +31,8 @@ Some helpful tips, tricks, good practices and ready-made solutions in Javascript
 2. [Functional programming](#functional_programming)
     1. [Currying](#currying)
           1. [Adding vat](#add_vat)
+    1. [Recursion](#recursion)
+          1. [Decrease and conquer - searching](#decrese_and_conquer_searching)
 
          
 
@@ -539,3 +541,44 @@ const addVATcurried = rate => amount => amount * (1 + rate / 100);
 const addFoodVAT = addVATcurried(18);
 // addFoodVAT(100) => 118
 ```
+
+
+<a name="functional_programming"></a>
+## Functional programming
+<a name="recurion"></a>
+### Recursion
+<a name="recurion"></a>
+##### Decrease and conquer - searching
+<a name="decrese_and_conquer_searching"></a>
+##### Adding vat curried way
+&nbsp;
+```
+
+const isInArray = (arr, key) => {
+  if (arr.length === 0) {
+  	return false;
+  } else if (arr[0] === key) {
+  	return true;
+  } else {
+  	return isInArray(arr.slice(1), key);
+  }
+}
+
+const numberArr = [1, 3, 4];
+
+// isInArray(numberArr, 3) => true
+// isInArray(numberArr, 3) => false
+
+const isInArray2 = (arr, key) => arr.length === 0 ? false : arr[0] === key || isInArray2(arr.slice(1), key);
+
+const arra = [1, 3, 4];
+
+// isInArray(arra, 3) => true
+// isInArray(arra, 2) => false
+
+const isInArray3 = (arr, key) => arr.length && (arr[0] === key || isInArray2(arr.slice(1), key))
+// this will return 0 (array length) if there's no searched value
+```
+
+
+
