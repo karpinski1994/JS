@@ -33,6 +33,7 @@ Some helpful tips, tricks, good practices and ready-made solutions in Javascript
           1. [Adding vat](#add_vat)
     1. [Recursion](#recursion)
           1. [Decrease and conquer - searching](#decrese_and_conquer_searching)
+          2. [Numbers exponential](#exponention)
 
          
 
@@ -550,7 +551,7 @@ const addFoodVAT = addVATcurried(18);
 <a name="recurion"></a>
 ##### Decrease and conquer - searching
 <a name="decrese_and_conquer_searching"></a>
-##### Adding vat curried way
+##### Checking if the value is in array
 &nbsp;
 ```
 
@@ -580,5 +581,20 @@ const isInArray3 = (arr, key) => arr.length && (arr[0] === key || isInArray2(arr
 // this will return 0 (array length) if there's no searched value
 ```
 
+<a name="exponential"></a>
+##### Exponentiation of numbers
+&nbsp;
+```
+const powerN = (base, power) => {
+	if(power === 0) {
+  	return 1;
+  } else if (power % 2) {
+  	return base * powerN(base, power-1);
+  } else {
+  	return powerN(base * base, power / 2);
+  }
+}
 
+// powerN(2, 10) => 1024
+```
 
