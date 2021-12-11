@@ -581,7 +581,7 @@ const isInArray3 = (arr, key) => arr.length && (arr[0] === key || isInArray2(arr
 // this will return 0 (array length) if there's no searched value
 ```
 
-<a name="exponential"></a>
+<a name="exponention"></a>
 ##### Exponentiation of numbers
 &nbsp;
 ```
