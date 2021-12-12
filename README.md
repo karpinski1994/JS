@@ -30,7 +30,10 @@ Some helpful tips, tricks, good practices and ready-made solutions in Javascript
           1. [Filter out falsy values](#filter_out_falsy_values)
 2. [Functional programming](#functional_programming)
     1. [Currying](#currying)
+    	  1. [Summing numbers](#currying_summing_numbers)
           1. [Adding vat](#add_vat)
+    1. [Partial application](#partial_app)
+          1. [Summing numbers](#partial_app_summing_numbers)
     1. [Recursion](#recursion)
           1. [Decrease and conquer - searching](#decrese_and_conquer_searching)
           2. [Numbers exponential](#exponention)
@@ -530,6 +533,20 @@ const invert = fn => (...args) => -fn(...args);
 const exampleFn = (a, b, c) => `${100 * a + 10 * b + c}`;
 const exampleCurried = a => b => c => `${100 * a + 10 * b + c}`;
 ```
+<a name="currying_summing_numbers"></a>
+##### Sum numbers using currying
+&nbsp;
+```
+// Normal way
+const sumNumbers = (a, b, c, d) => a + b + c + d;
+// sumNumbers(1,2,3,4) => 10
+
+// Currying by hand
+
+const curriedSumNumbers = a => b => c => d => a + b + c + d;
+// curriedSumNumbers(1)(2)(3)(4) => 10
+```
+
 <a name="add_vat"></a>
 ##### Adding vat curried way
 &nbsp;
@@ -543,9 +560,30 @@ const addFoodVAT = addVATcurried(18);
 // addFoodVAT(100) => 118
 ```
 
+<a name="partial_app"></a>
+### Partial application
+&nbsp;
 
-<a name="functional_programming"></a>
-## Functional programming
+<a name="partial_app_summing_numbers"></a>
+##### Sum numbers using partial application
+```
+// Partial application by hand
+const sumNumbers = (a, b) => a + b;
+const partial = (fn, ...args) => (...moreArgs) => fn(...args, ...moreArgs)
+const add1 = partial(sumNumbers, 1);
+// add1(2) => 3
+
+// Using js bind
+const sumNumbers = (a, b, c, d) => a + b + c + d;
+const partiallyAppliedSumNumbers = sumNumbers.bind(null, 1, 2);
+
+// partiallyAppliedSumNumbers(3,4) 10
+
+const otherPartiallyAppliedSumNumbers = partiallyAppliedSumNumbers.bind(null, 3);
+// otherPartiallyAppliedSumNumbers(4) => 10
+
+```
+
 <a name="recurion"></a>
 ### Recursion
 <a name="recurion"></a>
